@@ -1,17 +1,22 @@
 <template>
+
   <div class="layout">
+     <Navbar />
+
     <div class="header">
       <!-- This link is an n-link because it links to another Nuxt route -->
-      <n-link class="logo" to="/"><Logo/></n-link>
+      <!-- <n-link class="logo" to="/"><Logo/></n-link> -->
     </div>
+
     <nuxt class="content" />
+
     <div class="footer">
       <p>
         <!-- This link is not an n-link because it is external -->
         <a target="_blank"
             rel="noopener noreferrer"
             href="https://github.com/tylermercer/nuxt-netlifycms-boilerplate">
-          View this project on Github
+          View this boilerplate on Github
         </a>
       </p>
       <p>
@@ -23,22 +28,25 @@
        </a>
      </p>
     </div>
+
   </div>
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
+import Logo from '~/components/Logo.vue';
+import Navbar from '~/components/Navbar.vue';
 
 export default {
   components: {
     Logo,
+    Navbar,
   }
 }
 </script>
 
 <style>
 .layout {
-  max-width: 600px;
+  max-width: 80%;
   margin-left: auto;
   margin-right: auto;
   height: 100vh;
